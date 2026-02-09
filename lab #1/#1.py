@@ -8,9 +8,12 @@ def count_meet(str):
     for key in count:
         if count.get(key)==1:
             single_char.append(key)
-    return ", ".join(single_char)
+    return ",".join(single_char)
 while True:
     a=input("Введите строку: ")
+    if not a or not len(a)<1:
+        print("Недостаточно символов!")
+        continue
     if not a[-1]=='.':
         print("Введите строку, которая будет оканчиваться точкой")
         continue
