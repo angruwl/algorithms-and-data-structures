@@ -20,7 +20,7 @@ while True:
         break
     try:
         check=int(b)
-        B.add(b)
+        B.add(check)
     except ValueError:
         print('Множество содержит целые числа')
         continue
