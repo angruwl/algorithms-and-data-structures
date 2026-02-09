@@ -11,7 +11,7 @@ def count_meet(str):
     return ",".join(single_char)
 while True:
     a=input("Введите строку: ")
-    if not a or len(a)==0:
+    if not a or len(a)==1:
         print("Недостаточно символов!")
         continue
     if not a[-1]=='.':
