@@ -98,10 +98,25 @@ int main(){
     if (count_negative==0){
         product_negative=0;
     }
-        
     }
-    cout<<"Произведние отрицательных элементов массива =  "<<product_negative<<endl;
-
+    cout << "\n\n\n";
+    NewPointer(&array1, size1-2);
+    product_negative=1;
+    count_negative=0;
+    for (int i=0; i<size1-2; i++){
+        cout<< i+1 <<"элемент массива = "<< ReadPointer(array1+i)<<endl;
+        if (ReadPointer(array1+i)<0){ 
+            product_negative*= ReadPointer(array1+i);
+            count_negative+=1;
+        }
+    if (count_negative==0){
+        product_negative=0;
+    }    
+    }
+    cout << "\n\n\n";
+    for (int i=0; i<size1; i++){
+        cout<< i+1 <<"элемент массива = "<< ReadPointer(array1+i)<<endl;
+    }
     
     cout<<"Определим второй массив"<<endl;
     int size2=CheckSize();
