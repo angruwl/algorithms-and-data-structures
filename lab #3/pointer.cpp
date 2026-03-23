@@ -13,7 +13,7 @@ uniform_int_distribution <> distrib (-50, 50);
 void NewPointer(int** p, int byte){
     int flag=0;
     if (8 < byte){
-        cout<<"В сегменте недосаточно места. Введите размер меньший 8 "<<endl;
+        cout<<"В сегменте 1 недосаточно места."<<endl;
     }
     else{
         *p = segment1;
@@ -24,7 +24,7 @@ void NewPointer(int** p, int byte){
         cout<<"Массив создан в сегменте 1, его размер - "<<byte<<endl;
     }
     if (50 < byte){
-        cout<<"В сегменте недосаточно места. Введите размер меньший 50";
+        cout<<"В сегменте 2 недосаточно места.";
     }
     else if(flag==0){
         *p=segment2;
