@@ -99,21 +99,13 @@ int main(){
         product_negative=0;
     }
     }
-    cout << "\n\n\n";
+    cout<<"Произведние отрицательных элементов массива =  "<<product_negative<<'\n';
+    cout << "Демонстрация утечки памяти \n";
     NewPointer(&array1, size1-2);
-    product_negative=1;
-    count_negative=0;
     for (int i=0; i<size1-2; i++){
-        cout<< i+1 <<"элемент массива = "<< ReadPointer(array1+i)<<endl;
-        if (ReadPointer(array1+i)<0){ 
-            product_negative*= ReadPointer(array1+i);
-            count_negative+=1;
-        }
-    if (count_negative==0){
-        product_negative=0;
-    }    
+        cout<< i+1 <<"элемент массива = "<< ReadPointer(array1+i)<<endl;    
     }
-    cout << "\n\n\n";
+    cout << "\n";
     for (int i=0; i<size1; i++){
         cout<< i+1 <<"элемент массива = "<< ReadPointer(array1+i)<<endl;
     }
